@@ -1,3 +1,4 @@
+const fs = require("fs");
 const sharp = require("sharp");
 
 const FOLDER_PATH = "img/HEIC/"; // with last slash
@@ -19,7 +20,7 @@ const EXTENTIONS = [
 ];
 
 EXTENTIONS.forEach((extention) => {
-  console.log("=== ", extention, " ====");
+  // console.log("=== ", extention, " ====");
   sharp(`${FOLDER_PATH}${FILE_NAME}${FILE_EXTENTION}`).toFile(
     `${FILE_NAME}${extention}`,
     (err, info) => {
@@ -27,5 +28,5 @@ EXTENTIONS.forEach((extention) => {
       console.log("info", info);
     }
   );
-  console.log("======");
+  // console.log("======");
 });
